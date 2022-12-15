@@ -21,7 +21,7 @@ public class DashboardPage {
         return new TransferPage();
     }
 
-    public int getBallance(int index) {
+    public int getBalance(int index) {
         val text = cards.get(index).text();
         val start = text.indexOf(balanceStart);
         val finish = text.indexOf(balanceFinish);

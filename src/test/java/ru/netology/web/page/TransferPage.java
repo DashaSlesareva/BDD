@@ -10,9 +10,9 @@ public class TransferPage {
     private SelenideElement fromCard = $("[data-test-id='from'] input");
     private SelenideElement transferButton = $("[data-test-id='action-transfer']");
 
-    public void transfer(DataHelper user, int amount, int indexFrom) {
+    public void transfer(DataHelper.Card user, int amount, int indexFrom) {
         transferAmount.val(String.valueOf(amount));
-        fromCard.val(user.getCard(indexFrom));
+        fromCard.val(user.getCard());
         transferButton.click();
     }
 

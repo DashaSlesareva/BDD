@@ -13,7 +13,7 @@ public class LoginPage {
     private SelenideElement passwordField = $("[data-test-id='password'] input");
     private SelenideElement loginButton = $("[data-test-id='action-login']");
 
-    public VerificationPage login(DataHelper user) {
+    public VerificationPage login(DataHelper.AuthInfo user) {
         loginField.val(user.getLogin());
         passwordField.val(user.getPassword());
         loginButton.click();

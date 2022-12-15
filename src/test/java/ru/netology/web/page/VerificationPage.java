@@ -10,8 +10,8 @@ public class VerificationPage {
     private SelenideElement codeField = $("[data-test-id='code'] input");
     private SelenideElement verifyBurron = $("[data-test-id='action-verify']");
 
-    public DashboardPage verify(DataHelper user) {
-        codeField.val(user.getVerificationCode());
+    public DashboardPage verify(DataHelper.VerificationCode code) {
+        codeField.val(code.getCode());
         verifyBurron.click();
         return new DashboardPage();
     }
